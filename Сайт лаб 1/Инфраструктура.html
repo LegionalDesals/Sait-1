@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Инфраструктура — Город Новосибирск</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Город Новосибирск</h1>
+    <nav>
+        <ul>
+           <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html">О разработчике</a></li>
+            <li><a href="Инфраструктура.html">Инфраструктура</a></li>
+            <li><a href="История.html">История</a></li>
+            <li><a href="Контакты.html">Контакты</a></li>
+            <li><a href="Культура.html">Культура</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+<main>
+<h2>Инфраструктура</h2>
+<p>Новосибирск — крупный транспортный узел Сибири. Через город проходят железнодорожные и автомобильные магистрали федерального значения, включая Транссибирскую магистраль. В городе функционирует метрополитен, международный аэропорт «Толмачёво», а также развитая сеть общественного транспорта — автобусы, трамваи, троллейбусы и маршрутные такси.</p>
+
+<p>Город активно развивается: строятся новые жилые комплексы, мосты, торгово-развлекательные центры и спортивные сооружения. Большое внимание уделяется благоустройству дворов и развитию общественных пространств.</p>
+
+
+<h3>Карта города Новосибирска</h3>
+<div id="map" style="width: 100%; height: 400px;"></div>
+
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script type="text/javascript">
+    ymaps.ready(init);
+    function init() {
+        var myMap = new ymaps.Map("map", {
+            center: [55.0000, 82.9357],
+            zoom: 12
+        });
+        var myPlacemark = new ymaps.Placemark([55.0364, 82.9091], {
+            hintContent: 'Новосибирск',
+            balloonContent: 'Город Новосибирск'
+        });
+        myMap.geoObjects.add(myPlacemark);
+    }
+</script>
+
+</main>
+
+<footer>
+<p> 2025 Город Новосибирск</p>
+</footer>
+</body>
+</html>
